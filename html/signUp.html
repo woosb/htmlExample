@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="htmlex.html" method="post">
+	<table width="600px">
+		<tr>
+			<td colspan="2">
+				<span>다음 
+					<span style="background-color: peru;">
+						<b>내용에 맞게 입력</b>
+					</span> 하시오
+				</span>
+			</td>
+			<td rowspan="5">
+				<img src="test.jpg" width="200px" height="200px">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<span>다음 
+					<span>전공 분야를 입력하세요.</span>
+					<select>
+						<option value="소프트웨어">소프트웨어</option>
+						<option value="하드웨어">하드웨어</option>
+						<option value="임베디드">임베디드</option>
+						<option value="IOT">IOT</option>
+					</select>
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<div>
+					이름
+				</div>
+			</td>
+			<td>
+				<div>
+					<input type="text" name="name">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div>
+					아이디 
+				</div>
+			</td>
+			<td>
+				<div>
+					<input type="text" name="id">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div>
+					비밀번호
+				</div>
+			</td>
+			<td>
+				<div>
+					<input type="password" name="pw">
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div>
+		<fieldset style="width:600px;">
+		<legend><b>성별 조사</b></legend>
+			남성<input type="radio" name="gender" checked>
+			여성<input type="radio" name="gender">
+		</fieldset>
+	</div>
+	
+	<div>
+		<fieldset style="width:600px;">
+		<legend><b>취미 조사</b></legend>
+			책 읽기<input type="checkbox">
+			공부 하기<input type="checkbox">
+			책 읽으며 공부하기<input type="checkbox">
+			컴퓨터<input type="checkbox">
+		</fieldset>
+	</div>
+	
+	<div>
+		<fieldset style="width:600px;">
+		<legend><b>하고 싶은 말</b></legend>
+		<textarea rows="3" cols="70"></textarea>
+		</fieldset>
+	</div>
+	<button type="submit">완료</button>
+	<button type="reset">다시작성</button>
+</form>
+</body>
+</html>
