@@ -1,0 +1,17 @@
+h1, p{
+	background-color:green;
+}
+p{
+	color:red;
+	font-size:20px;
+}
+.class01{
+	color:blue;
+	font-size:30px;
+	background-color:pink;
+}
+
+#id01{
+	color:yellow;
+	background-color:blue;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	div{
+		border : 2px solid black;
+	}
+	#wrap{
+		margin : 0 auto;
+		text-align : center;
+		width : 80%;
+		display : flex;
+		flex-flow : column;
+	}
+	.header{
+		background-color : red;
+		padding : 20px;
+	}
+	.body{
+		display:flex;
+		flex-flow : row;
+		background-color : yellow;
+	}
+	.footer{
+		padding : 10px;
+		height : 100px;
+		background-color : pink;
+	}
+	
+	.nav{
+		padding : 10px;
+		height : 70px;
+		background-color: yellow;
+	}
+	.section{
+		display : flex;
+		flex-flow : column;
+		padding : 10px;
+		width : 70%;
+		height : 300px;
+		background-color: green;
+	}
+	.aside{
+		height : 300px;
+		padding : 10px;
+		width : 30%;
+		background-color : skyblue;
+	}
+	.h{
+		background-color : skyblue;
+		margin : 10px;
+		padding : 10px;
+	}
+	.a{
+		background-color : yellow;
+		margin : 10px;
+		padding : 10px;
+	}
+	.f{
+		background-color : pink;
+		margin : 10px;
+		padding : 10px;
+	}
+	
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		header
+	</div>
+	<div class="nav">
+		nav
+	</div>
+	<div class="body">
+		<div class="section">
+			section
+			<div class="h"><span>header</span></div>
+			<div class="a"><span>article</span></div>
+			<div class="f"><span>footer</span></div>
+		</div>
+		<div class="aside">
+			aside
+		</div>
+	</div>
+	<div class="footer">
+		fotter
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+

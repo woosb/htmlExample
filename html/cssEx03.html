@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.div{
+		background-color : yellow;
+		width : 300px;
+		padding : 25px;
+		border : 15px solid navy;
+		margin : 25px;
+		font-weight : bold;
+		font-family : 궁서체;
+		border-color : red;
+		border-style: dotted hidden solid hidden;
+		border-top: 5px solid red;
+		border-bottom : 5px solid green;
+	}
+	div{
+		width : 200px;
+		height : 50px;
+		padding : 10px;
+		margin : 30px;
+	}
+	#bs1{
+		border : 1px solid rgba(102, 186, 255, 0.4);
+		box-shadow : 0px 0px 20px 10px rgba(102, 186, 255, 0.4);
+	}
+	#bs2{
+		border : 1px solid black;
+		box-shadow : 10px 10px #BCE55C, 20px 20px #CEF279, 30px 30px red;
+	}
+	
+	img{
+		padding : 20px;
+		margin : 20px;
+		width : 200px;
+		height : 200px;
+	}
+	.shadow1 {
+		box-shadow : 5px 5px 10px #000000;
+	}
+	.shadow2 {
+		box-shadow : 5px -5px 10px #000000;
+	}
+</style>
+</head>
+<body>
+
+	<img src="test.jpg" class = "shadow1"><br>
+	<img src="test.jpg" class = "shadow2"><br>
+	<div id="bs1">
+		<h3>박스 그림자 특수 효과</h3>
+	</div>
+		<div id="bs2">
+		<h3>박스 그림자 특수 효과</h3>
+	</div>
+	<br>
+	<hr>
+	<div class="div">
+		박스 모델의 padding, border, margin속성의 기본값은 0 이며, 
+		상하좌우 4가지 방향을 top, bottom, left, right를 이용하여 지정할 수 있다.
+	</div>
+</body>
+</html>

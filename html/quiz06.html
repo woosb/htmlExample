@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .wrap { width:500px; margin:0 auto; display:flex;flex-flow:column; 
+        height:500px; border-style: solid;}
+        .header{order:1; height:20%; background:red;}
+        .nav { order:2; background:gold; height:15%; }
+        .section{ order:3; display:flex; height:50%;}
+        .section section { order:1; width:70%; height:100%; background:green;}
+        .section aside {  order:2; width:30%; height:100%; background:skyblue;}
+         #tag {margin: 10px; border-style: solid; text-align:center; background:pink;}
+        .footer { order:4;  background:pink; height:15%;}
+        h3,h1{ text-align:center; }
+       
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header"><h1>&lt; header &gt;</h1></header>
+        <nav class="nav"><h3>&lt; nav &gt;</h3></nav>
+        <div class="section">
+        <aside><h3>&lt; aside &gt;</h3></aside>
+        <section>
+            <h3>< section1 &gt;</h3>
+            <header id="tag">&lt; header &gt;</header>
+            <article id="tag">&lt; article &gt;</article>
+            <footer id="tag">&lt; footer &gt;</footer>
+        </section>
+        </div>
+        <footer class="footer"><h3>&lt; footer &gt;</h3></footer>
+    </div>
+</body>
+
+
+</html>

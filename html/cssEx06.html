@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	/*border로 인해 달라진 전체 사이즈를 맞춰준다.*/
+	*{box-sizing : border-box;}
+	
+	/*width의 길이가 같아도 border의 두께가 다르면 전체 크기가 서로 달라진다.*/
+	div{margin : 10px; width : 150px; background-color:green;}
+	#default{border : 1px solid black;}
+	#s{border : 10px solid black;}
+	#l{border : 30px solid black;}
+</style>
+</head>
+<body>
+	<div id="default">test</div>
+	<div id="s">test</div>
+	<div id="l">test</div>
+</body>
+</html>

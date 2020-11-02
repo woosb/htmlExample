@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="cssEx.css"></link>
+<style type="text/css">
+	/* *{
+		color : red;
+		background-color:yellow;
+		font-size:50px;
+	} */
+	
+	a:link{color:pink; text-decoration:none;}
+	a:visited{color:red;}
+	a:hover{text-decoration:overline; color:black;}
+	a:active{background-color:yellow;} 
+	
+	.div{
+		width:200px;
+		height:100px;
+		color:blue;
+		background-color:green;
+		opacity:0.9;
+		/*opacity : 색깔의 농도를 의미한다.*/
+	}
+	.div:hover{
+		width:400px;
+		height:50px;
+		color:red;
+		opacity:0.5;
+		background-color:yellow;
+		transition:all 1.5s linear 0.5s;
+	}
+	
+	ul li{
+		list-style : none; /* list에 있는 특수문자가 제거됨*/
+		display : inline; /* 일렬로 정렬*/
+		/*padding : 20px; (top, right, bottom, left); : 20px 20px(top/bottom, left/right) */
+	}
+	
+	div{
+		background-color : blue;
+		height : 100px;
+		overflow : hidden;
+		/*자식 태그의 크기가 부모태그의 크기보다 클 겨우 넘치는 부분을 숨겨준다.*/
+ 		/*overflow : auto; 자식태그의 크기만큼 숨겨주고 스크롤 바를 생성해서 보여준다.*/
+	}
+	
+	div div{
+		background-color : red;
+		width : 200px;
+		height : 200px;
+	}
+</style>
+<body>
+	
+	<div>
+		hello
+		<div>css</div>
+	</div>
+	
+	<hr>
+	<ul>
+		<li>순서가 없다</li>
+		<li>리스트 이다.</li>
+	</ul>
+
+	<hr>
+	<div class="div">
+		가상 클래스를 이용한 애니메이션 효과 <br>마우스가 위에 있으면 박스가 늘어남
+	</div>
+	
+	
+	<a href="#">test</a><br>
+	<a href="#">test</a><br>
+	<p>link : 웹 문서에서 사용자가 방문하지 않았던 곳을 표시</p>
+	<p>visited : 웹 문서에서 사용자가 방문한 곳을 표시</p>
+	<p>hover : 웹 문서에서 사용자가 링크에 마우스 포인터를 올리는 순간</p>
+	<p>active : 웹 문서에서 사용자가 링크를 클릭하는 순간</p>
+	<hr>
+	<h1>전체 스타일 적용</h1>
+	<p>모든 데이터에 적용 </p>
+	<b class="class01">클래스 선택자 적용</b>
+	<h3 class="class01">클래스 선택자 적용</h3> 
+	<h2 id="id01">아이디 선택자 적용</h2>
+</body>
+</html>

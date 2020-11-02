@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	/*
+		display : flex wrap의 자식들을 가로로 정렬하겠다.
+		flex-flow : column; 세로로 정렬하도록 한다.
+	*/
+	#wrap{
+		display : flex; flex-flow : column; width:90%; height : 200px; margin : 0 auto;
+		border : 4px solid black; text-align : center;
+	}
+	/*order : 1 정렬할 순서를 의미한다.*/
+	div{ width: 33.333%;}
+	div:first-child{order:1; background-color : red;}
+	div:nth-child(2){ order:2; display:flex; flex-flow:row; background-color : green;}
+	div:nth-child(3){ order:3; background-color : aqua;}
+	
+	.h1{width: 33.333%; order:1; background-color: red;}
+	.h2{width: 33.333%; order:2; background-color: yellow;}
+	.h3{width: 33.333%; order:3; background-color: gray;}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div><h1>1</h1></div>
+		<div>
+			<h1 class="h1">a</h1>
+			<h1 class="h2">b</h1>
+			<h1 class="h3">c</h1>
+		</div>
+		<div><h1>3</h1></div>
+	</div>
+</body>
+</html>
