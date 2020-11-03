@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <style>
+	    *{ box-sizing:border-box; overflow:hidden; }
+        #wrap { display:flex; flex-flow:column;
+         margin:0 auto; width:600px; height:600px; }
+        
+        .header{order:1; display:flex; height:20%; }
+        .margin{margin:25px 50px;}
+        .img-shadow{ box-shadow: 5px 5px 10px #000;
+		        	width:70px;height:70px; }
+		        	
+        .nav { order:2;  height:10%;}
+        ul{ height:60%; background-color:#666; 
+        padding-top:5px;
+        }
+        li{ 
+            display:inline; list-style: none; 
+            padding: 30px 0 0 30px; text-align: center; 
+        }
+        .a{ text-decoration: none; color:#fff; }
+        .a:hover{ background-color:#fff; color:#cc33cc;  }
+        
+        .section{ order:3; display:flex; height:40%;}
+        
+        
+        
+        .float_left{ float:left; }
+        .laside {  order:1;display:flex; flex-flow:column;
+	         width:20%; height:100%; }
+        .left_position { position:relative; text-align:center; top:-100px; }
+        
+        
+        .section section { order:2; width:50%; height:100%; }
+        
+        
+        .raside {  order:3;display:flex; flex-flow:column;
+                 margin:0 auto; width:30%; height:100%; }
+         
+         .login { order:1; display:flex; width:100%; height:25%; }
+        .button{height:100%; width:35%;}
+        .member { order:2; width:200px; height:20%;}
+        .news{ order:3; }
+        
+        .footer { order:4; height:20%; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+        	<h1 style="height:100%; width:20%;">
+        	<img class="img-shadow" src="test.jpg"></h1>
+        	<h1  style="height:100%;" class="margin"><i>맛집탐방 이야기 ^^</i></h1>
+        </header>
+        <nav class="nav">
+        	<ul>
+        		<li><a href="#" class="a">HOME</a></li>
+        		<li><a href="#" class="a">게시판</a></li>
+        		<li><a href="#" class="a">내정보</a></li>
+        	</ul>
+        </nav>
+        <div class="section">
+			<aside class="laside">
+				<div>
+					<img style="width:100px;height:110px;"src="test.jpg">
+				</div>
+				<div style="height:50%;">
+				<img style="width:100px;height:110px;" align="middle" src="test.jpg">
+				<div class="left_position" style="width:100px;">
+					<b>맛집 장터</b><br>맛집 이야기 시작 합니다.
+				</div>
+				</div>
+			</aside>
+	        <section>
+	            <h3>&lt; 오늘의 맛집 &gt;</h3>
+	            <div>
+	            	<div class="float_left" style="width:80%;">
+	            	오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img style="width:50px;height:50px; "src="test.jpg">
+	            </div>
+	            <div>
+	            	<div class="float_left" style="width:80%; ">
+	            	오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img style="width:50px;height:50px; "src="test.jpg">
+	            </div>
+	            <div>
+	            	<div class="float_left" style="width:80%; ">
+	            	오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img style="width:50px;height:50px; "src="test.jpg">
+	            </div>
+	        </section>
+	        
+	        <aside class="raside">
+		        <div class="login">
+		        	<div style="width:70%;">
+			            <input style="height:50%; width:100%;" type="text">
+			            <input style="height:50%; width:100%;" type="text">
+		            </div>
+		            <button class="button">로그인</button>
+		        </div>
+		        <div class="member">
+		        	<a href="#">회원가입</a> / <a href="#">ID/PW찾기</a>
+		    	</div>
+		    	<div class="news">
+		    		<h3><b>오늘의 뉴스</b></h3>
+		    		날씨 : -32도<br>
+		    		미세먼지 : 농도심함<br>
+		    		운세 : 누구 보다 좋음<br>
+		    	</div>
+	        </aside>
+        </div>
+        
+        <footer class="footer">
+        <hr>
+        <small>
+            &nbsp;&nbsp;  <span style="color:green"><i><b>CARE LAB</b></i></span><i>
+             Copyright &copy; AllRights Reserved</i> &nbsp;&nbsp;
+            &nbsp;&nbsp; &reg; 1999 | 회사소개 | TEL : 777-777
+        </small>
+        </footer>
+    </div>
+</body>
+</html>
+

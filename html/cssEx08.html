@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body{
+		font-weight: bold; font-size: 12pt; background-color: gray;
+	}
+	.span1{background-color: yellow; position: absolute; top:5px;}
+	.span2{background-color: red; left: 10px;}
+	.span3{background-color: yellow; position: relative; top:-5px;}
+	.div{background-color: skyblue;}
+</style>
+ <!-- relative static의 원래 위치부터 계산, absolute 상위요소 기준 태크를 기준으로 배치-->
+</head>
+<body>
+	<div style="background-color: green;">position</div>
+	<span class="span1">span1</span>
+	<span class="span2">span2</span>
+	<span class="span3">span3</span>
+	<div class="div"> 기본 값은 static 입니다.</div>
+</body>
+</html>
