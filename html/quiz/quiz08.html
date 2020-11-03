@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+<style>
+	img { width : 150px; height : 150px;}
+	#wrap { display: flex; flex-flow: column; margin:0 auto;
+			background-color: green; width:80%; max-width: 1200px; }
+	/* 헤더 css*/
+	.header{
+		display : flex;
+		align-items: center;
+	}
+	.img img{
+		width : 100px; height : 100px;
+	}
+	.title{
+		padding : 0 10%;
+	}
+	.title span{
+		font-size: 30px;
+		font-weight: 3px;
+		margin : 25px 50px;
+	}
+	
+	nav ul{
+		margin : 10px 0;
+		padding : 0 20px;
+		background-color: gray;
+	}
+	ul li{
+		padding : 10px;
+	}
+	
+	ul li:hover{
+		background-color : black;
+	}
+	.userImg{
+		display : flex;
+		flex-flow: column;
+		align-items : center;
+	}
+	.userImg img {
+		width : 200px;
+		height : 200px;
+		margin : 5px;
+	}
+	
+/****************************************************************/
+	@media all and (min-width:960px){
+	/* 헤더 css*/
+		nav ul{
+			display: flex;
+			flex-flow : row;
+		}
+		
+	/* userImg section */
+		.userImg{
+			display :flex;
+			flex-flow: row;
+		}
+		
+		.userImg img{
+			margin : 2px 30px;
+			
+		}
+	}
+	
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<header class="header">
+			<h1 class= "img"><img src="test.jpg"></h1>
+			<h1 class="title"><span>맛집 탐방 이야기 ^^</span></h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">게시판</a></li>
+				<li><a href="#">내정보</a></li>
+			</ul>
+		</nav>
+		<section class="userImg">
+			<img src="test.jpg">
+			<img src="test.jpg">
+			<img src="test.jpg">
+		</section>
+		<section>
+			<h2> &lt; 오늘의 맛집 &gt;</h2>
+		</section>
+	</div>
+</body>
+</html>
+
