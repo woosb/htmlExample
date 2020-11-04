@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="">	
+
+function display(){
+	n = document.getElementById('name').value;
+	document.getElementById('name').value = '';
+	document.getElementById('name2').value = n;
+		
+	a = document.getElementById('n01').innerHTML;
+	document.getElementById('n01').innerHTML = n;
+	document.getElementById('n02').innerHTML = a;	
+}
+</script>
+<body>
+
+	<img id="myImage" src="test1.jpg" width="150px" height="150px">
+	<h1 id="n01" ></h1>
+	<label id="n02"></label><br>
+	
+	<input type="text" id="name"><br>
+	<input type="text" id="name2"><br>
+	<input type="button" onclick="display()" value="click">
+</body>
+</html>

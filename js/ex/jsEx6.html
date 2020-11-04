@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>	
+	var city = ['seoul', 'busan', 'incheon',];
+	city[3] = "test";
+	city[4] = 12345;
+	city[5] = 1.111;
+	function printArr(){
+		city.forEach(element => document.write(element+"<br>"));
+		city.forEach(element => console.log(element));
+	}
+	printArr();
+	
+	document.write("<hr>");
+	joindata01 = city.join();
+	joindata02 = city.join('-');
+	joindata03 = city.join('그리고');
+	document.write(typeof joindata01 + "<br>");
+	document.write(joindata01 + "<br>");
+	document.write(joindata02 + "<br>");
+	document.write(joindata03 + "<br>");
+	
+	document.write("<hr>");
+	c = ['aaa', 'bbb'];
+	
+	data01 = city.concat('수원', '오산')
+	data02 = city.concat(c);
+	document.write(typeof data01 + "<br>");
+	document.write(data01);	
+	document.write("<br>");
+	document.write(typeof data02 + "<br>");
+	document.write(data02);
+	document.write("<br>");
+	
+	document.write(city.slice(1,3) + "<hr>");
+	
+	city = ['aaa', 'bbb'];
+	city.push('111', '222');
+	document.write(city + "<br>");
+	city.pop();
+	document.write(city + "<br>");
+	
+	city.unshift('충주', '강원도');
+	document.write(city + "<br>");
+	city.shift();
+	document.write(city + "<br>");
+
+	document.write("<hr>");
+	
+	city = ['111', '222', '333', '444']
+	function testArr(item, index){
+		document.write('city[' + index + '] => ' + item + "<br>");
+	}
+	city.forEach(testArr);
+	
+	city = [1, 2, 3, 4, 5, 10]
+	sum = 0;
+	function testArr02(item){
+		sum += item;
+	}
+	city.forEach(testArr02);
+	document.write('합 => ' + sum + "<br>");
+	
+	city.forEach(function (item){
+		document.write(item);
+	});
+</script>
+<body>
+</body>
+</html>

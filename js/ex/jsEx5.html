@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="">	
+var a = 0;
+function next(){
+	a += 1;
+	if(a > 8){
+    	a = 1
+	}
+	console.log(a);
+	imgView()
+}
+
+function prev(){
+	a -= 1;
+	if(a < 1){
+		a = 8
+	}
+	console.log(a);
+	imgView()
+}
+function imgView(){
+	document.getElementById('myImage').src = "test"+a+".jpg";
+}
+</script>
+<body>
+	<img id="myImage" src="test1.jpg" width="150px" height="150px">
+	
+	<input type="button" onclick="next()" value="click" >
+	<input type="button" onclick="prev()" value="click" >
+</body>
+</html>

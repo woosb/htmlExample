@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script src="jsEx1.js"></script>
+
+<body>
+	<table border = 1>
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+			<th>주소</th>
+		</tr>
+		<tr>
+			<td id="name"></td>
+			<td id="age"></td>
+			<td id="addr"></td>
+		</tr>
+	</table>
+</body>
+<script>
+	name = prompt('이름');
+	age = prompt('나이');
+	addr = prompt('주소');
+	
+	document.getElementById('name').innerHTML=name;
+	document.getElementById('age').innerHTML=age;
+	document.getElementById('addr').innerHTML=addr;
+</script>
+</html>

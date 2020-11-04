@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script src="jsEx1.js"></script>
+<script>
+	x = 5;
+	y = "5";
+	console.log(x == y); //true
+	console.log(x != y); //false
+	// === 는 타입까지 검사한다
+	console.log(x === y); // false
+	console.log(x !== y); // true
+	document.write("100 : " + typeof 100 + "<br>");
+	document.write("'100' : " + typeof '100'+ "<br>");
+	document.write("[1, 2, 3] : " + typeof [1, 2, 3] + "<br>");
+	document.write("{1:11, 2:22} : " + typeof {1:11, 2:22} + "<br>");
+	
+	var gender = 'M';
+	if(gender == 'M'){
+		result = "남성 입니다.";
+	}else{
+		result = "여성 입니다.";
+	}
+	document.write(result);
+	
+	switch(2){
+		case 1: day='mon'; document.write("<br>" + day); break;
+		case 2: day='tus'; document.write("<br>" + day); break;
+		case 3: day='wed'; document.write("<br>" + day); break;
+		case 4: day='thu'; document.write("<br>" + day); break;
+		case 5: day='fir'; document.write("<br>" + day); break;
+		case 6: day='sat'; document.write("<br>" + day); break;
+		case 7: day='sun'; document.write("<br>" + day); break;
+	}
+	
+	document.write("<br>");
+	for(var  x = 2; x <= 5; x++){
+		document.write("<b>----[" + x + "단] ---</b><br>");
+		for(var y = 1; y < 3; y++){
+			document.write(x + " * " + y + "=" + x*y + "<br>");
+		}
+	}
+	document.write("<br>");
+	
+	x = 1;
+	var sum = 0;
+	while(x < 100){
+		sum += x;
+		x ++;
+	}
+	document.write("1~99합 : "+sum);
+	
+</script>
+<body>
+</body>
+</html>
