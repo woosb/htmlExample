@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+var list = ['test1.jpg', 'test2.jpg', 'test3.jpg', 'test4.jpg', 
+			'test5.jpg', 'test6.jpg', 'test7.jpg', 'test8.jpg', ];
+var a = 0;
+var stopVal;
+function img(){
+	if(a > 7) a = 0;
+	document.getElementById('img').src = "../img/"+list[a];
+	a += 1;
+	stopVal = setTimeout('img()', 1000);
+}
+
+function stop(){
+	clearTimeout(stopVal);
+}
+function left(){
+	a -= 1;
+	if(a  <0) a = 7;
+	document.getElementById('img').src = "../img/"+list[a];
+}
+function right(){
+	a += 1;
+	if(a > 7) a = 0;
+	document.getElementById('img').src = "../img/"+list[a];
+}
+</script>
+<body onload="img()">
+	<div onmouseover="stop()" onmouseout="img()">
+		<img onclick="left()" src="../img/왼쪽화살표.jpg" width="50px" height="50px" style="padding :50px 0;">
+		<img id="img" src="" width="150px" height="150px">
+		<img onclick="right()" src="../img/오른쪽화살표.jpg" width="50px" height="50px" style="padding :50px 0;">
+	</div>
+</body>
+</html>

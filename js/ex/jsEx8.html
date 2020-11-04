@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)">
+		Mouse Over Me!!
+	</div>
+	
+	<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over this text</h1>
+	
+</body>
+<script type="text/javascript">
+	function init(){
+		alert('초기화 작업을 진행 합니다.');
+	}
+	function mOver(obj){obj.innerHTML = "Thank You"}
+	function mOut(obj){obj.innerHTML = "Mouse Over Me"}
+</script>
+<style type="text/css">
+	div{background-color : #d94a38; width: 120px; height:50px}
+</style>
+</html>

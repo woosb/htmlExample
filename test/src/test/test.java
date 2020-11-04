@@ -11,13 +11,7 @@ public class test {
 			{{ 0, 0},{1, 0}, {1, -1}},
 	};
 	
-	
 	public static void main(String[] args) {
-		
-//		char a = '2';
-//		char b = '1';
-//		int c = 1;
-//		System.out.println((a-'0')-c);
 		
 		Scanner scanner = new Scanner(System.in);
 		int x, y;
@@ -25,7 +19,6 @@ public class test {
 		x = scanner.nextInt();
 		
 		ArrayList<String> list = new ArrayList<String>();
-		
 		for(int i = 0; i < y; i ++) {
 			String str = scanner.next();
 			list.add(str);
@@ -41,14 +34,14 @@ public class test {
 		boolean ok = true;
 		int nx = 0;
 		int ny = 0;
+		
+		System.out.println("type : "+type);	
+		System.out.println("x : " + x + " y : " + y);
 		//3칸짜리 블록의 위치를 type에 따라서 하나씩 찾아준다.
 		for(int i = 0; i < 3; i++) {
 			ny = y + coverType[type][i][0];
 			nx = x + coverType[type][i][1]; 
 			//{ 0, 0},{1, 0}, {1, -1}
-			
-			System.out.println(type);			
-			System.out.println("x : " + x + " y : " + y);
 			System.out.println("nx : " + nx + " ny : " + ny);
 			//블록이 전체 사이즈를 넘어갈때 
 			if(ny < 0 || ny >= list.size() || nx < 0 || nx >= list.get(0).length()) {
@@ -70,14 +63,15 @@ public class test {
 		// i = y; j = x;
 		// (0,0) 부터 시작하는 완전탐색을 
 		//하면서 지도에서 빈칸이 존재하는 좌표 하나를 선택.
-		for(int i = 0; i < list.size(); i ++) {
-			for(int j = 0; j < list.get(i).length(); j++) {
+		for(int i = 0; i < list.size(); i ++) { // i : 0~2
+			for(int j = 0; j < list.get(i).length(); j++) { // j : 0~6
 				if(list.get(i).charAt(j) == '0') {
 					System.out.println("빈칸의 좌표 : x : " + j + " y : " + i);
 					y = i;
 					x = j;
 					break;
 				}
+				System.out.println("빈칸이 없을 때" + y + ", " + x);
 			}
 			//if문으로 들어가지를 못했을 때('0'이 지도에 존재하지 않을때, 빈칸이 없을때)
 			if(y != -1) break;

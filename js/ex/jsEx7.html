@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="digClock"></div>
+	<button onclick="digClock()">시작</button>
+	<button onclick="endClock()">종료</button>
+	
+	<p id="demo"></p>
+	<button onclick="myStart()">start</button>
+	<button onclick="myStop()">stop</button>
+	
+<script type="text/javascript">
+var mytime;
+function myStart(){
+	mytime = setInterval(mytime = setTime, 1000);
+}
+function myStop(){
+	clearInterval(mytime);
+}
+function setTime(){
+	da = new Date();
+	document.getElementById('demo').innerHTML = da.toLocaleTimeString();
+}
+
+var e;
+function digClock(){
+	var today = new Date();
+	date = today.getFullYear() + "년" + 
+	today.getMonth()+1 + "월 " + today.getDate() + "일 " +
+	today.getHours() + "시 " + today.getMinutes() +"분 "+ today.getSeconds() + "초 ";
+	document.getElementById("digClock").innerHTML = date;
+
+	//자기자신을 1초마다 호출하는 함수이다. (자기자신만 호출 가능);
+	e = setTimeout('digClock()', 1000);
+}
+
+function endClock(){
+	clearTimeout(e);
+}
+</script>
+</body>
+</html>
