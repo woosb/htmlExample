@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	span{
+		background-color : red; 
+		width:100px; 
+		height: 50px; 
+		font-weight: bold; 
+		font-size:20px;
+		text-align: center;
+	}
+	
+	#wrap{
+		display : flex;
+		width : 800px;
+		margin:0 auto;
+		position: relative;
+	}
+	
+	#side{
+	 	display:flex; flex-flow : column; right : 0px; position: absolute;
+	}
+</style>
+<script>	
+const imgsNum = 5;
+
+function img(){
+	var imgTable = document.getElementsByClassName("imgTable");
+}
+var list = [];
+function add(name){
+	list.push(name);
+	if(list.length > imgsNum){
+		list.shift();
+	}
+	side();
+}
+
+function side(){
+	document.getElementById("side").innerHTML="";
+	if(list.length >0){
+		var span = document.createElement('span'); 
+		span.innerHTML="최근 본 상품";
+		span.style.backgroundColor="green";
+		document.getElementById("side").appendChild(span);
+	}
+	
+	list.forEach(element =>{
+		img = document.createElement('img');
+		img.setAttribute('src', '../img/'+element);
+		img.setAttribute('width', 100);
+		img.setAttribute('height', 100);
+		document.getElementById('side').appendChild(img);
+	});
+}
+
+</script>
+<body>
+<div id="wrap">
+	<table>
+		<tr>
+			<td><a href="#" id="img1" onclick="add('test1.jpg')"><img src="../img/test1.jpg" width=100 height=100></a></td>
+			<td><a href="#" id="img2" onclick="add('test2.jpg')"><img src="../img/test2.jpg" width=100 height=100></a></td>
+			<td><a href="#" id="img3" onclick="add('test3.jpg')"><img src="../img/test3.jpg" width=100 height=100></a></td>
+			<td><a href="#" id="img4" onclick="add('test4.jpg')"><img src="../img/test4.jpg" width=100 height=100></a></td>
+    	</tr>
+		<tr>
+			<td><a href="#" id="img5" onclick="add('test5.jpg')"><img src="../img/test5.jpg" width=100 height=100></a></td>
+			<td><a href="#" id="img6" onclick="add('test6.jpg')"><img src="../img/test6.jpg" width=100 height=100></a></td>
+			<td><a href="#" id="img7" onclick="add('test7.jpg')"><img src="../img/test7.jpg" width=100 height=100></a></td>
+			<td><a href="#" id="img8" onclick="add('test8.jpg')"><img src="../img/test8.jpg" width=100 height=100></a></td>
+    	</tr>
+   	</table>
+	<aside id="side">
+		<span>목록이 없습니다.</span>
+	</aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="insertOpt()" id="cl">
+<input type="button" value="BODY 하위 태그 삭제" onclick="clearElement()">
+<hr>
+<p id="msg">문서 객체 스타일 변경</p>
+<input type="button" value = "텍스트 스타일 변경" onclick="textstyle()">
+<input type="button" value = "텍스트 숨기기" onclick="texthidden()">
+<input type="button" value = "텍스트 보이기" onclick="textvisible()">
+
+<hr>
+	<p id="test"> test </p>
+	<a href="#" onclick="add()">[이미지 추가]</a>
+	<a href="#" onclick="remove()">[이미지 삭제]</a>
+	
+	<hr>
+	
+	<select id="insert">
+<!-- 		<option value="1">야구</option> -->
+<!-- 		<option value="2">족구</option> -->
+<!-- 		<option value="3">배구</option> -->
+	</select>
+</body>
+<script type="text/javascript">
+function textstyle(){
+	sty = document.getElementById('msg');
+	sty.style.fontSize = '30px';
+	sty.style.fontStyle = 'italic';
+	sty.style.color = 'red';
+}
+function texthidden(){
+	document.getElementById('msg').style.visibility="hidden";
+}
+function textvisible(){
+	document.getElementById('msg').style.visibility="visible";
+}
+var img
+function add(){
+	img = document.createElement('img');
+// 	img.src = '../img/test1.jpg';
+// 	img.width= 100;
+// 	img.height = 100;
+	
+	img.setAttribute('src', '../img/test1.jpg');
+	img.setAttribute('width', 100);
+	img.setAttribute('height', 100);
+// 	document.body.appendChild(img);
+	document.getElementById('test').appendChild(img);
+}
+function remove(){
+// 	document.body.removeChild(img);
+	document.getElementById('test').removeChild(img);
+}
+
+function insertOpt(){
+	var insert = document.getElementById('insert')
+	var arr = ['야구', '축구', '배구', '농구']
+	for(i = 0; i < arr.length; i++){
+		opt = document.createElement('option')
+		opt.value=arr[i]
+		opt.innerHTML = arr[i]
+		insert.appendChild(opt)
+	}
+}
+
+function clearElement(){
+	document.getElementById('cl').innerHTML = ""
+}
+</script>
+<style type="text/css">
+	
+</style>
+</html>
