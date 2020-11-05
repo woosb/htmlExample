@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+var m = 0;
+var s = 0;
+
+var e;
+function time(){
+	var today = new Date();
+// 	date = today.getMinutes() +"분 "+ today.getSeconds() + "초 ";
+	
+	s = s + 1;
+	if(s > 60){
+		s = 0;
+		m += 1;
+	}
+	console.log(s);
+	console.log(m);
+	date = m + "분 " + s + " 초 "
+	document.getElementById("time").innerHTML = date;
+	e = setTimeout('time()', 1000);
+}
+
+function endClock(){
+	clearTimeout(e);
+}
+</script>
+<style>
+	#wrap{
+		width : 800px;
+		height : 700px;
+		margin : 0 auto;
+	}
+	.header { 
+		margin : 0 auto;
+		text-align: center;	
+	}
+	
+	.contents{
+		margin: 30px auto;
+		background-color: white;
+		width: 800px;
+		height : 500px;
+		border: 2px solid skyblue;
+		position: relative;
+	}
+	
+	img{
+		margin: 0 30px;
+	}
+	form{
+		display:flex; 
+		flex-flow:column; 
+		padding: 10px 0px;
+		margin : 0 20px;
+	}
+	#error{
+		position: absolute;
+		right: 10px;
+		bottom : 20px;
+	}
+</style>
+<body onload="time()">
+<div id="wrap">
+	<div class="header">
+		<h1>최강 자격증 기출문제 전자문제집 CBT</h1>
+		<span>운전면허 학과시험(필기) 1종 2종 (2020년판) 0010회 기출문제(시험 모드)</span>
+		<span>경과 시간 : </span><span id="time"></span>
+	</div>
+	<section class="contents">
+			<h3>3. 다음 안전표지의 뜻으로 맞는 것은 ? (정답률 :54%)</h3>
+			<img src="../../img/car01.png" width="150px" height="150px">
+			<form >
+				<span><input type="radio" name="q" value="1">일열주차표시</span>
+				<span><input type="radio" name="q" value="2">상습정체구간 표지</span>
+				<span><input type="radio" name="q" value="3">야간통행 주의 표지</span>
+				<span><input type="radio" name="q" value="4">차선변경구간 표지</span>
+				<br>
+				<span><input type="button" value="넘어가기"><input type="button" value="제출"></span>
+			</form>
+			<input type="button" id="error" value="오류 및 오타 신고">
+	</section>
+	<footer style="text-align : center; color:blue;">
+		<span>학원 전화ㅇ미ㅏ랑ㄴ마ㅣㄹ먼ㄴ</span>
+	</footer>
+</div>
+</body>
+</html>

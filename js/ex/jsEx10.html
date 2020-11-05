@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="naver" onclick="location.href='https://www.naver.com'">
+	<form action="jsEx02.html" method="get" id="fo">
+		이름<input type="text" name="name" id="name"><br>
+		주소<input type="text" name="addr" id="addr"><br>
+     	<input type="submit" value="submit">
+		<input onclick="test()" type="button" value="btn">
+	</form>
+
+	<hr>
+	<input type="button" onclick="popup()" value="팝업"><br>
+	
+	<hr>
+	<input type="button" onclick="myClick()" value="button"><br>
+	<p id="myclick"></p>
+	<hr>
+	
+	<form>
+		<input  type="text" minlength="3" maxlength="5" ><br>
+		<input  type="text" id="pw" ><br>
+		<input type="button" value="클릭" onclick="myFocus()">
+		<input type="submit" value="체크" >
+	</form>
+	<hr>
+	<a href="jsEx01.html">다음 페이지</a>
+	<button type="button" onclick = "goBack()">이전 </button>
+	<button type="button" onclick = "goForward()">다음 </button>
+	<hr>
+	<input type="text" id="input" onchange="check()"><br>
+	<input type="text" id="output" ><br>
+	<input type="text"><br>
+	<hr>
+	<input type="text" maxlength="3"><br>	
+	<input type="text" id="pw"><br>
+	<input type="button" value="클릭" onclick="myFocus()"><br>
+</body>
+<script type="text/javascript">
+	function test(){
+// 		fo.submit();
+
+		//a 태그와 같이 단순히 페이지만 이동해 준다.
+		location.href="https://www.naver.com"
+	}
+	function popup(){
+// 		window.open("https://www.naver.com","", "width=500, height=500");
+// 		window.open("https://www.naver.com","_self", "width=500, height=500");
+		window.open("popup.html","", "width=500, height=500")
+	}
+	function myClick(){
+		alert("안녕하세요. 환영합니다.");
+		var result = confirm("처음 방문 입니까?"); 
+		 if(result){
+			 document.getElementById("myclick").innerHTML = "처음 방문해 주서셔 갑사합니다.";
+		 }else{
+			 document.getElementById("myclick").innerHTML = "다시 방문해 주서셔 갑사합니다.";
+		 }
+	}
+	function myFocus(){
+		document.getElementById("pw").focus();
+	}
+	function check(){
+		put = document.getElementById("input").value;
+		document.getElementById("output").value = put;
+		document.getElementById("input").value="";
+	}
+	function goForward(){
+		window.history.forward()
+	}
+	function goBack(){
+		window.history.back()
+	}
+</script>
+<style type="text/css">
+</style>
+</html>

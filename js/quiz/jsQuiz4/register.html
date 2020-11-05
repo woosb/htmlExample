@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+</style>
+<script>	
+function check(){
+	var id = document.getElementById("id");
+	var pw = document.getElementById("pw");
+	var pwCheck = document.getElementById("pwCheck");
+	
+	if(id.value == ""){
+		alert("아이디는 필수사항 입니다.");
+		id.focus();
+	}else if(pw.value == ""){
+		alert("비밀번호는 필수사항 입니다.");
+		pw.focus();
+	}else if(pwCheck.value == ""){
+		alert("비밀번호 확인은 필수사항 입니다.");
+		pwCheck.focus();
+	}else if(pw.value != pwCheck.value){
+		alert("비밀번호가 일치하지 않습니다.")
+	}else{
+		document.getElementById("insertForm").submit();
+// 		location.href="success.html"
+	}
+}
+
+function checkPw(){
+	pw = document.getElementById("pw").value;
+	pwCheck = document.getElementById("pwCheck").value;
+	
+	if(pw != pwCheck){
+		document.getElementById("chs").innerHTML = "불일치!";
+	}else{
+		document.getElementById("chs").innerHTML = "일치!";
+	}
+}
+</script>
+<body>
+<div id="wrap">
+<form action="success.html" method="get" id="insertForm">
+	<table> 
+		<tr>
+			<td><input type="text" id="id" name="id" placeholder="Id"><span>(*필수항목)</span></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="pw" name="pw" onchange="checkPw()" placeholder="pw"><span>(*필수항목)</span></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="pwCheck" onchange="checkPw()" placeholder="pw check"><span id="chs"></span></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="name" name="name"placeholder="name"></td>
+		</tr>
+	</table>
+</form>
+<button id="submit" onclick="check()">등록</button>
+
+</div>
+</body>
+</html>
