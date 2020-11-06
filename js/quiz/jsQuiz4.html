@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	#wrap{
+		margin : 0 auto;
+		width : 300px;
+		height : 200px;	
+		}
+	#box{
+   		display:none; 
+		
+	}
+	#box.a{
+		display: block;
+		margin : 0 auto;
+		margin-top : 20px;
+		width : 100px;
+		height : 100px;
+	}
+	#box.b{
+		display: block;
+		margin : 0 auto;
+		margin-top : 20px;
+		width : 100px;
+		height : 100px;
+		background: white;
+	}
+	
+	#button{
+		display: flex;
+	}
+</style>
+<script>	
+	function btn(){
+		t1 = document.getElementById('target1');
+		t2 = document.getElementById('target2');
+		t3 = document.getElementById('target3');
+		t4 = document.getElementById('target4');
+		t5 = document.getElementById('target5');
+		t1.addEventListener('click', btn_listener);
+		t2.addEventListener('click', btn_listener);
+		t3.addEventListener('click', btn_listener);
+		t4.addEventListener('click', btn_listener);
+		t5.addEventListener('click', btn_listener);
+	}
+	var box;
+	function btn_listener(event){
+		switch(event.target.id){
+			case 'target1' :
+				clearTimeout(e);
+				box = document.getElementById('box');
+				box.style.backgroundColor = "yellow";
+				box.innerHTML="<b>버튼1 클릭</b>"
+				box.setAttribute('class', 'a');
+				break;
+			case 'target2' :
+				clearTimeout(e);
+				box = document.getElementById('box');
+				box.style.backgroundColor = "green";
+				box.innerHTML="<b>버튼2 클릭</b>"
+				box.setAttribute('class', 'a');
+				break;
+			case 'target3' :
+				clearTimeout(e);
+				box = document.getElementById('box');
+				box.style.backgroundColor = "pink";
+				box.innerHTML="<b>버튼3 클릭</b>"
+				box.setAttribute('class', 'a');
+				break;
+			case 'target4' :
+				box = document.getElementById('box');
+				box.style.backgroundColor = "red";
+				auto();
+				break;
+			case 'target5' :
+				blockRM();
+				break;
+		}
+	}
+	
+	var e;
+	
+	function blockRM(){
+		let remove = document.getElementById('box');
+		remove.removeAttribute('class');
+		clearTimeout(e);
+	}
+	var flag;	
+	function auto(){
+		if(e =! undefined){
+			flag = !flag;
+			let box = document.getElementById('box');
+			box.setAttribute('class', 'a');
+			if(flag){
+// 				box.setAttribute('class', 'a');
+				box.innerHTML="<b>버튼4 클릭</b>"
+				box.style.backgroundColor = "red";
+			}else{
+// 				blockRM()
+				box.innerHTML=""
+				box.style.backgroundColor = "white";
+			}
+			e = setTimeout('auto()', 100);
+		}
+	}
+</script>
+<body onload="btn()">
+	<div id="wrap">
+		<div id="button">
+			<input type="button" id="target1" value="버튼1"><br>
+			<input type="button" id="target2" value="버튼2"><br>
+			<input type="button" id="target3" value="버튼3"><br>
+			<input type="button" id="target4" value="자동"><br>
+			<input type="button" id="target5" value="지우기"><br>
+		</div>
+		<div id="box"></div>
+	</div>
+</body>
+</html>

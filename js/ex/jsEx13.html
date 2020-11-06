@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<script type="text/javascript">
+		function init(){
+			t1 = document.getElementById('target1');
+			t2 = document.getElementById('target2');
+			t1.addEventListener('mouseover', btn_listener);
+			t2.addEventListener('click', btn_listener);
+		}
+		function btn_listener(event){
+			switch(event.target.id){
+				case 'target1' :alert('1선택'); break;
+				case 'target2' :alert('2선택'); break;
+			}
+			let remove = document.getElementById('remove');
+			remove.setAttribute('class','abc');
+		}
+		function blockRM(){
+			let remove = document.getElementById('remove');
+			remove.removeAttribute('class');
+		}
+	</script>
+	<style type="text/css">
+		#remove{ display: none;}
+		#remove.abc{ display:block; background:green;}
+	</style>
+<body onload="init()">
+	<input type="button" id="target1" value="button1"><br>
+	<input type="button" id="target2" value="button2"><br>
+	
+	<hr>
+	
+	<div id="remove">
+		<h3>안녕하세요</h3>
+		<input type="button" value="되돌리기" onclick="blockRM()">
+		<div><h3>되돌리기 연습</h3></div>
+	</div>
+	
+</body>
+</html>
