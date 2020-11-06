@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button.add").click(function(){
+			$("h1, h2, p").addClass("blue");
+			$("div").addClass("important");
+		});
+		
+		$("button.remove").click(function(){
+			$("h1, h2, p").removeClass("blue");
+			$("div").removeClass("important");
+		});
+	
+	
+		$(".toggle").click(function(){
+			$("#02, #03, #04").toggleClass("red");
+			$("#01").css({"background-color" : "yellow" , "color" : "blue"});
+			
+		});
+	
+	});
+	
+	
+</script>
+<style type="text/css">
+	.blue{
+		 color: blue;
+	}
+	.important{
+		font-weight: bold;
+		font-size:20px;
+	}
+	.red{
+		color:red;
+	}
+</style>
+<body>
+	<h1>ㅁㄴㅇ</h1>
+	<h2>asd</h2>
+	<p>asa</p>
+	<div>vsvv</div>
+	<button class="add">add</button>
+	<button class="remove">remove</button>
+	
+	<hr>
+	
+	<button class="toggle">toggle 적용/해제</button>
+	<h1 id="01">html</h1>
+	<h2 id="02">test</h2>
+	<p id="03">aaa</p>
+	<div id="04">bbb</div>
+</body>
+</html>

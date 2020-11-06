@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<script type="text/javascript">
+
+	$(function(){
+		$("#panel").click(function(){$("#panel").slideUp("fast")});
+		$("#slide").click(function(){$("#panel").slideDown(5000)});
+		$("#flip").click(function(){$("#panel").slideToggle("slow")});
+		$("#stop").click(function(){$("#panel").stop()});
+		
+		$("#s").click(function(){$("#p").slideToggle("fast")});
+	});
+</script>
+<style type="text/css">
+	#slide, #panel, #flip{padding : 5px; text-align : center; background-color: #e5eecc; border : solid 1px #c3c3c3;}
+	#panel{padding : 70px; display : none; background-color: #ffff00; }
+	#s{ padding : 5px; text-align : center; background-color: #e5eecc; border : solid 1px #c3c3c3;}
+	#p{padding : 70px; display : none; background-color: #ffff00; }
+	
+</style>
+<body>
+	<div id="slide">[오늘의 공지사항]</div>
+	<div id="panel">오늘의 jquery 프로그램<br>예제를 실행해 보자</div>
+	<div id="flip">toggle slide</div><br><br>
+	<button id="stop"> stop sliding</button>
+	<hr>
+	<div id="s">[오늘의 공지사항]</div>
+	<p id="p">내용이 들어 갑니다.</p>
+</body>
+</html>

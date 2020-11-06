@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		$("#d").draggable();
+	})
+</script>
+<style type="text/css">
+	.drag{
+		width:200px;
+		height:100px;
+		background-color: red;
+		border-style:solid;
+	}
+</style>
+<body>
+	<div id="d" class="drag">
+		<p> Drag me around</p>
+	</div>
+</body>
+</html>

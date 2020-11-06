@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<script type="text/javascript">
+	 var n = 0;
+	 $(document).ready(function(){
+		 $("div.out").mouseenter(function(){
+			$("p:first").text("마우스 포인터 들어옴");
+			$("p:last").text(++n);
+		 });
+		 $("div.out").mouseleave(function(){
+			$("p:first").text("마우스 포인터 나감");
+			$("p:last").text("최종 횟수 : " + n);
+		 });
+		 $("div.out").mousedown(function(){
+				$("p:first").hide();
+				$("p:last").text("메세지 사라짐");
+		 });
+		 $("div.out").mouseup(function(){
+				$("p:first").show();
+				$("p:last").text("메세지 보임");
+		 });
+	 });
+</script>
+<style type="text/css">
+	div.out{
+		width: 200px; height: 100px; border : 1px solid #000;
+		text-align : center; background :yellow;
+	}
+</style>
+<body>
+	<div class="out">
+		<p>마우스 이벤트 알아 보기</p>
+		<p>0</p>		
+	</div>
+</body>
+</html>

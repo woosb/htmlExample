@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".b1").click(function(){
+			$("img").animate({width:"100px"})	
+		});	
+		$(".b2").click(function(){
+			$("img").css({width:"200px"})	
+		});	
+		$(".b3").click(function(){
+			$("img").css({width:"300px"})	
+		});	
+	});
+</script>
+<style type="text/css">
+	.css_pic{
+		height:430px; text-align:center;
+	}
+	.css_pic img{
+		width:250px;
+	}
+</style>
+<body>
+	<div class="css_pic">
+		버튼을 누르면 그림의 크기가 바뀝니다.<br>
+		<button class="b1">가로 100픽셀</button>
+		<button class="b2">가로 200픽셀</button>
+		<button class="b3">가로 300픽셀</button><hr>
+		<img name="pic1" src="../img/car01.png">
+	</div>
+</body>
+</html>

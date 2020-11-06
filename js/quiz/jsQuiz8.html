@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<style>
+	.remote{
+		display : flex; flex-flow: column; text-align: center; background-color: gray;
+		width : 200px;
+	}
+</style>
+<script>
+	$(function(){
+		$("#d").draggable();
+		var s = 10;
+		$(".b").click(function(){
+			s += 3;
+			$(".content").animate({"font-size" :s});
+			document.getElementById('size').innerHTML = s;	
+
+		});
+		
+		$(".a").click(function(){
+			s -= 3;
+			$(".content").css({"font-size" : s});
+			document.getElementById('size').innerHTML = s;	
+		});
+	})
+	
+</script>
+<body>
+<div class="content" style="font-size : 0px;">
+	<h1>오늘의 소설</h1>
+	<p>
+	오늘도 덥다
+	</p>
+	<p>
+	내일도 덥다
+	</p>
+	<p>
+	모래는 바다
+	</p>
+</div>
+
+	<div class="remote"  id="d">
+		<span style="background-color: skyblue">리모콘</span>
+		<div style="background-color: yellow; height : 40px;">
+			<img class="a" src="../img/sub.jpg" width="30px;">
+			<span id="size"></span>
+			<img class="b" src="../img/add.png" width="30px;">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+body{
+	position: relative;
+}
+.carImage{
+	width : 150px;
+	height : 150px;
+}
+#wrap{
+	width : 500px;
+	height : 500px;
+	background : pink;
+	margin : auto 0;
+	z-index: 1;
+}
+#mainImage{
+	display :none;
+	z-index : 2;
+	width : 500px;
+	position: absolute;
+	
+}
+#wrap.dark{
+	background : black;
+	opacity: 0.3;
+}
+
+#big{
+	display : none;
+	background: gray;
+	top : 150px;
+	width : 530px;
+	position: absolute;
+}
+#big.a{
+	display: block;;
+}
+#div_x{
+	position: absolute;
+	right : 3px;
+}
+</style>
+<script>
+function init(){
+	let list = document.getElementsByClassName('carImage');
+	for(i = 0; i < list.length; i ++){
+		console.log(list[i]);
+		list[i].addEventListener('click', btn_listener)
+	}
+}
+
+function btn_listener(event){
+	switch(event.target.id){
+	case '1':
+		wrap = document.getElementById("wrap");
+		wrap.setAttribute('class', 'dark');
+		big = document.getElementById("big");
+		big.setAttribute('class', 'a');
+		img = document.getElementById("i");
+		img.src="../img/car01.png";
+		break;
+	case '2':
+		wrap = document.getElementById("wrap");
+		wrap.setAttribute('class', 'dark');
+		big = document.getElementById("big");
+		big.setAttribute('class', 'a');
+		img = document.getElementById("i");
+		img.src="../img/car02.png";
+		break;
+	case '3':
+		wrap = document.getElementById("wrap");
+		wrap.setAttribute('class', 'dark');
+		big = document.getElementById("big");
+		big.setAttribute('class', 'a');
+		img = document.getElementById("i");
+		img.src="../img/car03.png";
+		break;
+	}
+}
+function remove(){
+	wrap = document.getElementById("wrap");
+	wrap.removeAttribute('class', 'dark');
+	big = document.getElementById("big");
+	big.removeAttribute('class', 'a');
+}
+
+</script>
+<body  onload="init()">
+	<div id="wrap">
+		<h1>light box</h1>
+		<img src="../img/car01.png" id="1" class="carImage">
+		<img src="../img/car02.png" id="2" class="carImage">
+		<img src="../img/car03.png" id="3" class="carImage">
+	</div>
+	<div id="big">
+		<div id="div_x" onclick="remove()">x</div>
+		<img id="i" src=""  width="500px" style="padding:10px;">
+	</div>
+</body>
+</html>
